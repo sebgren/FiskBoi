@@ -9,4 +9,8 @@ public class LoadSceneOnClick : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneIndex);
     }
+
+    // Load main menu
+
+    // Load level (int level_nr)
 }
