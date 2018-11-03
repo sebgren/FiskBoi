@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
+    public bool ignoreX;
+
     GameObject player;
 
 	void Start () {
@@ -13,6 +15,8 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
         Vector3 newPos = player.transform.position;
         newPos.z = -15f;
+
+        if (ignoreX) newPos.x = 0;
 
         transform.position = Vector3.Lerp(transform.position, newPos, 1f);
     }

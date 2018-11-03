@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private Vector3 spawnPosition;
-    CharacterController character;
+    Character character;
 
     private void Start()
     {
-        character = GetComponent<CharacterController>();
+        character = GetComponent<Character>();
     }
 
     void Update () {
