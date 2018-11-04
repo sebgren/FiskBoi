@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerStats : Stats
 {
-    public delegate void PlayerBreathEvent();
+    public delegate void PlayerBreathEvent(GameObject target);
 
     [SerializeField]
     private int _breathMaxOffset = 10;
     [SerializeField]
     private float _breath = 0;
 
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
     public event CharacterDeathEvent deathEvent;
     public event PlayerBreathEvent breathEvent;
 
@@ -24,7 +25,7 @@ public class PlayerStats : Stats
 
         if (_breath > _breathMaxOffset)
         {
-            die();
+            die(DeathReason.CHOKING);
         }
         invokeBreathNotNull();
     }
@@ -39,7 +40,7 @@ public class PlayerStats : Stats
 
         if (_breath <= (_breathMaxOffset * -1))
         {
-            die();
+            die(DeathReason.DROWNING);
         }
         invokeBreathNotNull();
     }
@@ -85,7 +86,19 @@ public class PlayerStats : Stats
         reset();
         if (deathEvent != null)
         {
-            deathEvent.Invoke();
+            deathEvent.Invoke(gameObject, DeathReason.UNKNOWN);
+        }
+    }
+
+    /// <summary>
+    /// Triggers death of the player
+    /// </summary>
+    public override void die(DeathReason reason)
+    {
+        reset();
+        if (deathEvent != null)
+        {
+            deathEvent.Invoke(gameObject, reason);
         }
     }
 
@@ -99,7 +112,7 @@ public class PlayerStats : Stats
     {
         if (breathEvent != null)
         {
-            breathEvent.Invoke();
+            breathEvent.Invoke(gameObject);
         }
     }
 

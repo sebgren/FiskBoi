@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : MonoBehaviour {
-    public delegate void CharacterDamgeEvent();
-    public delegate void CharacterDeathEvent();
+    public delegate void CharacterDamgeEvent(GameObject target);
+    public delegate void CharacterDeathEvent(GameObject target, DeathReason reson);
 
     [SerializeField]
     private int _health = 10;
@@ -25,12 +25,23 @@ public class Stats : MonoBehaviour {
         
         if (damageEvent != null)
         {
-            damageEvent.Invoke();
+            damageEvent.Invoke(gameObject);
         }
 
         if (this._health <= 0)
         {
-            die();
+            die(DeathReason.KILLED);
+        }
+    }
+
+    /// <summary>
+    /// Triggers death of the NPC
+    /// </summary>
+    public virtual void die(DeathReason reason)
+    {
+        if (deathEvent != null)
+        {
+            deathEvent.Invoke(gameObject, reason);
         }
     }
 
@@ -41,7 +52,7 @@ public class Stats : MonoBehaviour {
     {
         if (deathEvent != null)
         {
-            deathEvent.Invoke();
+            deathEvent.Invoke(gameObject, DeathReason.UNKNOWN);
         }
     }
 
@@ -49,4 +60,12 @@ public class Stats : MonoBehaviour {
     {
         _health = _healthMax;
     }
+}
+
+public enum DeathReason
+{
+    UNKNOWN,
+    DROWNING,
+    CHOKING,
+    KILLED
 }

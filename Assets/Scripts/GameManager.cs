@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
         _PlayerStats = _player.GetComponent<PlayerStats>();
 
         // TODO Add death reason
-        _PlayerStats.deathEvent += () =>
+        _PlayerStats.deathEvent += (target, reason) =>
         {
             gameOver();
         };
