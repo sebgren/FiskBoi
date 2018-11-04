@@ -1805,6 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88e33692b6ffdb4aac9f58014fe3498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 808179596}
 --- !u!4 &597659778
 Transform:
   m_ObjectHideFlags: 0
@@ -2064,6 +2065,7 @@ GameObject:
   - component: {fileID: 808179600}
   - component: {fileID: 808179599}
   - component: {fileID: 808179601}
+  - component: {fileID: 808179602}
   - component: {fileID: 808179598}
   m_Layer: 0
   m_Name: Character
@@ -2096,18 +2098,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 808179596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c501437b9256ddf42a38257e7207775a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0262e7724012f0a409f5e4a6948024bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   waterMask:
     serializedVersion: 2
     m_Bits: 16
-  thrust: 500
+  thrust: 450
   speed: 10
-  status: 0
+  breathChangeRate: 0.1
 --- !u!50 &808179599
 Rigidbody2D:
   serializedVersion: 4
@@ -2154,6 +2156,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.33, y: 1.28}
   m_Direction: 0
+--- !u!114 &808179602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 808179596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc33049fe24ba4459dc9b9925f70aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 10
+  _healthMax: 10
+  _breathMaxOffset: 10
+  _breath: 0
 --- !u!1 &824995093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb839889e33109f4a987e2cdc658a505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreX: 0
 --- !u!1 &1348932859
 GameObject:
   m_ObjectHideFlags: 0
