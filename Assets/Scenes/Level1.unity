@@ -2103,7 +2103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 39
   waterMask:
     serializedVersion: 2
     m_Bits: 16

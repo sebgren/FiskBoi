@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 508, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 53
+  controlID: 73
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1873
     height: 1307
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 54
+  controlID: 74
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 1873
     height: 951
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 55
 --- !u!114 &8
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 407
     height: 951
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -255,15 +255,15 @@ MonoBehaviour:
     y: 0
     width: 687
     height: 1307
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 16}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,8 +294,8 @@ MonoBehaviour:
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -480,8 +480,8 @@ MonoBehaviour:
       tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: Added player and npc stats classes, added death and damgage events
     currentBranch: '[master]'
@@ -783,6 +783,8 @@ MonoBehaviour:
         - .vs\GitForUnityTest\v15\Server
         - .vs\GitForUnityTest\v15\Server\sqlite3
         - Library
+        - Library\gfu
+        - Library\gfu\cache
         - Library\metadata
         - Library\metadata\02
         - Library\metadata\16
@@ -808,6 +810,7 @@ MonoBehaviour:
         - Packages
         - ProjectSettings
         - Temp
+        - Temp\__Backupscenes
         values:
         - path: .vs
           label: .vs
@@ -902,6 +905,42 @@ MonoBehaviour:
         - path: Library
           label: Library
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            status: 0
+            staged: 0
+        - path: Library\gfu
+          label: gfu
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            status: 0
+            staged: 0
+        - path: Library\gfu\cache
+          label: cache
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1367,6 +1406,24 @@ MonoBehaviour:
             originalPath: 
             status: 0
             staged: 0
+        - path: Temp\__Backupscenes
+          label: __Backupscenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            status: 0
+            staged: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -1611,6 +1668,24 @@ MonoBehaviour:
           originalPath: 
           status: 0
           staged: 0
+      - path: Library\assetDatabase3
+        label: assetDatabase3
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\assetDatabase3
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\assetDatabase3
+          projectPath: Library\assetDatabase3
+          originalPath: 
+          status: 3
+          staged: 0
       - path: Library\CurrentLayout.dwlt
         label: CurrentLayout.dwlt
         level: 1
@@ -1662,6 +1737,132 @@ MonoBehaviour:
           path: Library\expandedItems
           fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\expandedItems
           projectPath: Library\expandedItems
+          originalPath: 
+          status: 3
+          staged: 0
+      - path: Library\gfu
+        label: gfu
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          status: 0
+          staged: 0
+      - path: Library\gfu\cache
+        label: cache
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          status: 0
+          staged: 0
+      - path: Library\gfu\cache\branches.yaml
+        label: branches.yaml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\gfu\cache\branches.yaml
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\branches.yaml
+          projectPath: Library\gfu\cache\branches.yaml
+          originalPath: 
+          status: 3
+          staged: 0
+      - path: Library\gfu\cache\gitlocks.yaml
+        label: gitlocks.yaml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\gfu\cache\gitlocks.yaml
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gitlocks.yaml
+          projectPath: Library\gfu\cache\gitlocks.yaml
+          originalPath: 
+          status: 3
+          staged: 0
+      - path: Library\gfu\cache\gitstatusentries.yaml
+        label: gitstatusentries.yaml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\gfu\cache\gitstatusentries.yaml
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gitstatusentries.yaml
+          projectPath: Library\gfu\cache\gitstatusentries.yaml
+          originalPath: 
+          status: 3
+          staged: 0
+      - path: Library\gfu\cache\gittrackingstatus.yaml
+        label: gittrackingstatus.yaml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\gfu\cache\gittrackingstatus.yaml
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gittrackingstatus.yaml
+          projectPath: Library\gfu\cache\gittrackingstatus.yaml
+          originalPath: 
+          status: 3
+          staged: 0
+      - path: Library\gfu\cache\repoinfo.yaml
+        label: repoinfo.yaml
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Library\gfu\cache\repoinfo.yaml
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\repoinfo.yaml
+          projectPath: Library\gfu\cache\repoinfo.yaml
           originalPath: 
           status: 3
           staged: 0
@@ -3087,6 +3288,42 @@ MonoBehaviour:
           originalPath: 
           status: 0
           staged: 0
+      - path: Temp\__Backupscenes
+        label: __Backupscenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          status: 0
+          staged: 0
+      - path: Temp\__Backupscenes\0.backup
+        label: 0.backup
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Temp\__Backupscenes\0.backup
+          fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\__Backupscenes\0.backup
+          projectPath: Temp\__Backupscenes\0.backup
+          originalPath: 
+          status: 1
+          staged: 0
       - path: Temp\UnityLockfile
         label: UnityLockfile
         level: 1
@@ -3233,6 +3470,12 @@ MonoBehaviour:
       originalPath: 
       status: 1
       staged: 0
+    - path: Library\assetDatabase3
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
     - path: Library\CurrentLayout.dwlt
       fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\CurrentLayout.dwlt
       projectPath: Library\CurrentLayout.dwlt
@@ -3248,6 +3491,36 @@ MonoBehaviour:
     - path: Library\expandedItems
       fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\expandedItems
       projectPath: Library\expandedItems
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Library\gfu\cache\branches.yaml
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Library\gfu\cache\gitlocks.yaml
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Library\gfu\cache\gitstatusentries.yaml
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Library\gfu\cache\repoinfo.yaml
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
       originalPath: 
       status: 3
       staged: 0
@@ -3575,6 +3848,12 @@ MonoBehaviour:
       originalPath: 
       status: 1
       staged: 0
+    - path: Temp\__Backupscenes\0.backup
+      fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\__Backupscenes\0.backup
+      projectPath: Temp\__Backupscenes\0.backup
+      originalPath: 
+      status: 1
+      staged: 0
     - path: Temp\UnityLockfile
       fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityLockfile
       projectPath: Temp\UnityLockfile
@@ -3605,15 +3884,15 @@ MonoBehaviour:
       originalPath: 
       status: 1
       staged: 0
-    changedFilesText: 68 changed files
+    changedFilesText: 75 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2018-11-04T05:10:39.508+01:00
+      updatedTimeString: 2018-11-04T17:29:00.768+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2018-11-04T05:10:40.582+01:00
+      updatedTimeString: 2018-11-04T18:51:39.815+01:00
       cacheType: 5
     lastLocksChangedEvent:
-      updatedTimeString: 2018-11-04T05:10:40.575+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 6
   historyView:
     currentLogHasUpdate: 0
@@ -41457,8 +41736,8 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/seho3066/GitForUnityTest.git
-  statusAhead: 3
-  statusBehind: 1
+  statusAhead: 0
+  statusBehind: 0
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
@@ -41470,13 +41749,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2018-11-04T05:10:39.508+01:00
+    updatedTimeString: 2018-11-04T17:29:00.768+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2018-11-04T05:10:40.589+01:00
+    updatedTimeString: 2018-11-04T17:29:01.859+01:00
     cacheType: 4
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2018-11-04T05:10:40.582+01:00
+    updatedTimeString: 2018-11-04T17:29:07.119+01:00
     cacheType: 5
   pullButtonContent:
     m_Text: Pull
@@ -41787,9 +42066,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2491044, y: 2.3121777, z: -0.23046875}
+    m_Target: {x: 0.791153, y: 2.2467558, z: -0.23046875}
     speed: 2
-    m_Value: {x: 1.2491044, y: 2.3121777, z: -0.23046875}
+    m_Value: {x: 0.791153, y: 2.2467558, z: -0.23046875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -41940,7 +42219,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 4e320000aeddffffe857fcff061d00002e1d0000e2040000fa2bfeffe604000078d5ffff365afeff38050000f2040000e00400002c0500003005000048060000ec040000ea04000072edfefff40400008206000076060000f6040000060500002a1e000054070000049dffff001c0000021c0000ce1d0000b82c00006e23000030240000e633000070250000122600006c2500001c61ffff0000000094300000942d0000681400002e1b0000f8150000da0f0000e00f0000341b0000fe150000fa1a0000c4140000660e0000181b00001016000008100000c8120000540c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

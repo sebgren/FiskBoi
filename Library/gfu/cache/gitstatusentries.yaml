@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-11-04T18:16:42.781+01:00
+  lastUpdatedAtString: 2018-11-04T18:51:39.815+01:00
   initializedAtString: 2018-11-04T17:29:01.846+01:00
   entries:
   - path: .vs\GitForUnityTest\v15\.suo
@@ -44,18 +44,6 @@ MonoBehaviour:
     projectPath: .vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-wal
     originalPath: 
     status: 1
-    staged: 0
-  - path: Assets\Scripts\Player\CharacterController.cs
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Scripts\Player\CharacterController.cs
-    projectPath: Assets\Scripts\Player\CharacterController.cs
-    originalPath: 
-    status: 5
-    staged: 0
-  - path: Assets\Scripts\Player\CharacterController.cs.meta
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Scripts\Player\CharacterController.cs.meta
-    projectPath: Assets\Scripts\Player\CharacterController.cs.meta
-    originalPath: 
-    status: 5
     staged: 0
   - path: GitForUnityTest.csproj
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\GitForUnityTest.csproj
@@ -213,18 +201,6 @@ MonoBehaviour:
     originalPath: 
     status: 1
     staged: 0
-  - path: Library\metadata\c5\c501437b9256ddf42a38257e7207775a
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\c5\c501437b9256ddf42a38257e7207775a
-    projectPath: Library\metadata\c5\c501437b9256ddf42a38257e7207775a
-    originalPath: 
-    status: 5
-    staged: 0
-  - path: Library\metadata\c5\c501437b9256ddf42a38257e7207775a.info
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\c5\c501437b9256ddf42a38257e7207775a.info
-    projectPath: Library\metadata\c5\c501437b9256ddf42a38257e7207775a.info
-    originalPath: 
-    status: 5
-    staged: 0
   - path: Library\metadata\cd\cd275a19871cd1c4ba5bc00736e0cb11
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\cd\cd275a19871cd1c4ba5bc00736e0cb11
     projectPath: Library\metadata\cd\cd275a19871cd1c4ba5bc00736e0cb11
@@ -258,6 +234,12 @@ MonoBehaviour:
   - path: Library\metadata\f8\f81db49d78a7365449c3465843eacd87.info
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\f8\f81db49d78a7365449c3465843eacd87.info
     projectPath: Library\metadata\f8\f81db49d78a7365449c3465843eacd87.info
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\ScriptAssemblies\BuiltinAssemblies.stamp
+    projectPath: Library\ScriptAssemblies\BuiltinAssemblies.stamp
     originalPath: 
     status: 1
     staged: 0
