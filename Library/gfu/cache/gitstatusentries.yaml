@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-11-05T22:43:52.859+01:00
-  initializedAtString: 2018-11-05T22:28:57.722+01:00
+  lastUpdatedAtString: 2018-11-06T00:02:33.705+01:00
+  initializedAtString: 2018-11-05T23:59:52.817+01:00
   entries:
   - path: .vs\GitForUnityTest\v15\.suo
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\.vs\GitForUnityTest\v15\.suo
@@ -33,24 +33,6 @@ MonoBehaviour:
     originalPath: 
     status: 1
     staged: 0
-  - path: .vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-shm
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\.vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-shm
-    projectPath: .vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-shm
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: .vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-wal
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\.vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-wal
-    projectPath: .vs\GitForUnityTest\v15\Server\sqlite3\storage.ide-wal
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Assets\Scenes\Level1.unity
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Scenes\Level1.unity
-    projectPath: Assets\Scenes\Level1.unity
-    originalPath: 
-    status: 3
-    staged: 0
   - path: Assets\Scripts\Character\CharacterSounds.cs
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Scripts\Character\CharacterSounds.cs
     projectPath: Assets\Scripts\Character\CharacterSounds.cs
@@ -62,12 +44,6 @@ MonoBehaviour:
     projectPath: Assets\Scripts\Character\CharacterSounds.cs.meta
     originalPath: 
     status: 1
-    staged: 0
-  - path: Assets\Scripts\Player\Character.cs
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Scripts\Player\Character.cs
-    projectPath: Assets\Scripts\Player\Character.cs
-    originalPath: 
-    status: 3
     staged: 0
   - path: Assets\Sound.meta
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Sound.meta
@@ -99,6 +75,18 @@ MonoBehaviour:
     originalPath: 
     status: 1
     staged: 0
+  - path: Assets\Sound\Music\funky_fish.wav
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Sound\Music\funky_fish.wav
+    projectPath: Assets\Sound\Music\funky_fish.wav
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Assets\Sound\Music\funky_fish.wav.meta
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Assets\Sound\Music\funky_fish.wav.meta
+    projectPath: Assets\Sound\Music\funky_fish.wav.meta
+    originalPath: 
+    status: 1
+    staged: 0
   - path: GitForUnityTest.csproj
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\GitForUnityTest.csproj
     projectPath: GitForUnityTest.csproj
@@ -123,11 +111,29 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
+  - path: Library\CurrentLayout.dwlt
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\CurrentLayout.dwlt
+    projectPath: Library\CurrentLayout.dwlt
+    originalPath: 
+    status: 3
+    staged: 0
   - path: Library\EditorInstance.json
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
     status: 1
+    staged: 0
+  - path: Library\expandedItems
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\expandedItems
+    projectPath: Library\expandedItems
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library\gfu\cache\branches.yaml
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\branches.yaml
+    projectPath: Library\gfu\cache\branches.yaml
+    originalPath: 
+    status: 3
     staged: 0
   - path: Library\gfu\cache\gitlocks.yaml
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\gitlocks.yaml
@@ -150,12 +156,6 @@ MonoBehaviour:
   - path: Library\gfu\cache\repoinfo.yaml
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\gfu\cache\repoinfo.yaml
     projectPath: Library\gfu\cache\repoinfo.yaml
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\InspectorExpandedItems.asset
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
     originalPath: 
     status: 3
     staged: 0
@@ -345,6 +345,24 @@ MonoBehaviour:
     originalPath: 
     status: 1
     staged: 0
+  - path: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96
+    projectPath: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.info
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.info
+    projectPath: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.info
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.resource
+    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.resource
+    projectPath: Library\metadata\f5\f59dd70c527d2454da7f81f1f8310d96.resource
+    originalPath: 
+    status: 1
+    staged: 0
   - path: Library\metadata\f8\f81db49d78a7365449c3465843eacd87
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\metadata\f8\f81db49d78a7365449c3465843eacd87
     projectPath: Library\metadata\f8\f81db49d78a7365449c3465843eacd87
@@ -356,18 +374,6 @@ MonoBehaviour:
     projectPath: Library\metadata\f8\f81db49d78a7365449c3465843eacd87.info
     originalPath: 
     status: 1
-    staged: 0
-  - path: Library\ScriptAssemblies\Assembly-CSharp.dll
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\ScriptAssemblies\Assembly-CSharp.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
-    originalPath: 
-    status: 3
     staged: 0
   - path: Library\ScriptAssemblies\BuiltinAssemblies.stamp
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Library\ScriptAssemblies\BuiltinAssemblies.stamp
@@ -570,48 +576,6 @@ MonoBehaviour:
   - path: Temp\UnityLockfile
     fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityTempFile-949fb75e2355489419429933f6a668ab
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityTempFile-949fb75e2355489419429933f6a668ab
-    projectPath: Temp\UnityTempFile-949fb75e2355489419429933f6a668ab
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityTempFile-9749f509aa1e4524493274d99b04c755
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityTempFile-9749f509aa1e4524493274d99b04c755
-    projectPath: Temp\UnityTempFile-9749f509aa1e4524493274d99b04c755
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityTempFile-c4518516fef45ee4e8bd61d5619ce5c9
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityTempFile-c4518516fef45ee4e8bd61d5619ce5c9
-    projectPath: Temp\UnityTempFile-c4518516fef45ee4e8bd61d5619ce5c9
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityTempFile-ef6d332c572b24649b5b6441815ef2ac
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityTempFile-ef6d332c572b24649b5b6441815ef2ac
-    projectPath: Temp\UnityTempFile-ef6d332c572b24649b5b6441815ef2ac
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityTempFile-f500b1ab041f247429580a64333a43e9
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityTempFile-f500b1ab041f247429580a64333a43e9
-    projectPath: Temp\UnityTempFile-f500b1ab041f247429580a64333a43e9
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityVS_obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityVS_obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    projectPath: Temp\UnityVS_obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Temp\UnityVS_obj\Debug\GitForUnityTest.csproj.CoreCompileInputs.cache
-    fullPath: E:\ProgrameringsProjekt\Unity\GitForUnityTest\Temp\UnityVS_obj\Debug\GitForUnityTest.csproj.CoreCompileInputs.cache
-    projectPath: Temp\UnityVS_obj\Debug\GitForUnityTest.csproj.CoreCompileInputs.cache
     originalPath: 
     status: 1
     staged: 0
