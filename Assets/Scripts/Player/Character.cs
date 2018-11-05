@@ -29,15 +29,22 @@ public class Character : MonoBehaviour {
     private float avaible_thrust;
 
     private PlayerStats _stats;
+    private CharacterSounds _sounds;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         _stats = GetComponent<PlayerStats>();
+        _sounds = GetComponent<CharacterSounds>();
 
         if (_stats == null)
         {
             throw new MissingComponentException("No PlayerStats found. Player won't take damage. You cheater.");
+        }
+
+        if (_sounds == null)
+        {
+            Debug.LogWarning("No CharacterSounds component found. No sounds will play");
         }
     }
 
@@ -82,6 +89,7 @@ public class Character : MonoBehaviour {
     {
         if (CanJump() || inWater)
         {
+            _sounds.jump();
             rb.AddForce(transform.up * avaible_thrust);
             jumpsLeft--;
         }
