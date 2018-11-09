@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 61
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 7
-  lastUpdatedAtString: 2018-11-03T16:19:37.003+01:00
-  initializedAtString: 2018-11-03T16:19:36.996+01:00
+  lastUpdatedAtString: 2018-11-10T00:03:12.016+01:00
+  initializedAtString: 2018-11-10T00:03:12.016+01:00
   gitName: Jacob Johansson
   gitEmail: jikan_j@hotmail.com
