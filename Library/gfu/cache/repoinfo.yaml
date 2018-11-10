@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-11-10T00:16:49.823+01:00
-  initializedAtString: 2018-11-10T00:16:49.823+01:00
+  lastUpdatedAtString: 2018-11-10T01:54:18.624+01:00
+  initializedAtString: 2018-11-10T01:54:18.624+01:00
   currentGitRemote:
     name: origin
-    url: git@github.com:seho3066/GitForUnityTest.git
+    url: https://github.com/seho3066/GitForUnityTest.git
     login: 
     user: 
     host: 
@@ -30,9 +30,9 @@ MonoBehaviour:
     name: master
     remote:
       name: origin
-      url: git@github.com:seho3066/GitForUnityTest.git
+      url: https://github.com/seho3066/GitForUnityTest.git
     trackingBranch: master
   currentConfigRemote:
     name: origin
-    url: git@github.com:seho3066/GitForUnityTest.git
+    url: https://github.com/seho3066/GitForUnityTest.git
   currentHead: 

@@ -7,22 +7,42 @@ public class PlayerController : MonoBehaviour {
     private Vector3 spawnPosition;
     Character character;
 
+    GameManager _gameManager;
+
     private void Start()
     {
         character = GetComponent<Character>();
+
+        GameObject manager = GameObject.Find("GameManager");
+
+        if (!manager)
+        {
+            throw new MissingReferenceException("There is no GameManager in the scene?!?!");
+        }
+        _gameManager = manager.GetComponent<GameManager>();
     }
 
     void Update () {
 
-        character.Move(Input.GetAxis("Horizontal"));
-
-        if (Input.GetKeyDown("space"))
+        if (AcceptingInput())
         {
-            character.Jump();
+
+            character.Move(Input.GetAxis("Horizontal"));
+
+            if (Input.GetKeyDown("space"))
+            {
+                character.Jump();
+            }
+
         }
     }
 
     public void Respawn() {
         transform.position = spawnPosition;
+    }
+
+    private bool AcceptingInput()
+    {
+        return !GameManager.PAUSED_STATES.Contains(_gameManager.gameState);
     }
 }
