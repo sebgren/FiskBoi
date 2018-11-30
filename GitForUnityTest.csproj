@@ -315,6 +315,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\CharacterSounds.cs" />
     <Compile Include="Assets\Scripts\Character\Stats.cs" />
+    <Compile Include="Assets\Scripts\Env\VictoryOrb.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\Character.cs" />

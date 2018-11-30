@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
     public delegate void GameStateChangeDelegate(GameState newState, GameState oldState);
     public event GameStateChangeDelegate onGameStateChange;
 
+    public float _timer;
+
     public void Start()
     {
         if (_player == null)
@@ -31,11 +33,25 @@ public class GameManager : MonoBehaviour {
 
         _PlayerStats = _player.GetComponent<PlayerStats>();
 
+        Character playerCharacter = _player.GetComponent<Character>();
+        playerCharacter.onVictoryEvent += () =>
+        {
+            _gameState = GameState.PAUSED;
+        };
+
         _PlayerStats.deathEvent += (target, reason) =>
         {
             gameOver(reason);
         };
+        start();
+    }
 
+    public void Update()
+    {
+        if (_gameState == GameState.STARTED)
+        {
+            _timer += Time.deltaTime;
+        }
     }
 
 
@@ -63,7 +79,13 @@ public class GameManager : MonoBehaviour {
         _player.GetComponent<PlayerController>().Respawn();
         _PlayerStats.reset();
         _deathMenu.SetActive(false);
+        start();
+    }
+
+    public void start()
+    {
         this.gameState = GameState.STARTED;
+        _timer = 0;
     }
 
     public enum GameState
@@ -93,5 +115,6 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
+
 
 }

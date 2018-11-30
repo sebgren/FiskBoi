@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-11-10T01:54:18.624+01:00
-  initializedAtString: 2018-11-10T01:54:18.624+01:00
+  lastUpdatedAtString: 2018-11-30T22:35:18.033+01:00
+  initializedAtString: 2018-11-30T22:35:18.033+01:00
   currentGitRemote:
     name: origin
     url: https://github.com/seho3066/GitForUnityTest.git
