@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
+        spawnPosition = new Vector3(transform.position.x, transform.position.y +1, transform.position.z);
         character = GetComponent<Character>();
 
         GameObject manager = GameObject.Find("GameManager");
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour {
             throw new MissingReferenceException("There is no GameManager in the scene?!?!");
         }
         _gameManager = manager.GetComponent<GameManager>();
+
     }
 
     void Update () {

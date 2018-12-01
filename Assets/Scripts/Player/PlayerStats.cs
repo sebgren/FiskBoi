@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : Stats
 {
-    public delegate void PlayerBreathEvent(GameObject target);
+    public delegate void PlayerBreathEvent(GameObject target, float breath);
 
     [SerializeField]
     private int _breathMaxOffset = 10;
@@ -112,7 +112,7 @@ public class PlayerStats : Stats
     {
         if (breathEvent != null)
         {
-            breathEvent.Invoke(gameObject);
+            breathEvent.Invoke(gameObject, _breath);
         }
     }
 

@@ -46,7 +46,8 @@ public class Character : MonoBehaviour {
     private float _SoundLowpassMin = 250;
     private string _FreqFilterName = "MyExposedParam";
     public AudioMixer masterMixer;
-
+    private GameManager _gameManager;
+    private SpriteRenderer _renderer;
 
     private void Start()
     {
@@ -54,7 +55,16 @@ public class Character : MonoBehaviour {
         _stats = GetComponent<PlayerStats>();
         _sounds = GetComponent<CharacterSounds>();
 
-        
+        _renderer = animator.gameObject.GetComponent<SpriteRenderer>();
+
+        GameObject manager = GameObject.Find("GameManager");
+
+        if (!manager)
+        {
+            throw new MissingReferenceException("There is no GameManager in the scene?!?!");
+        }
+        _gameManager = manager.GetComponent<GameManager>();
+
 
         if (_stats == null)
         {
@@ -74,6 +84,11 @@ public class Character : MonoBehaviour {
 
     private void Update()
     {
+        if (!AcceptingInput())
+        {
+            return;
+        }
+
         inWater = IsInWaterCheck();
         current_speed = speed;
         avaible_thrust = thrust;
@@ -84,11 +99,13 @@ public class Character : MonoBehaviour {
             avaible_thrust *= .3f;
             rb.gravityScale = .5f;
             masterMixer.SetFloat(_FreqFilterName, _SoundLowpassMin);
+            _renderer.color = new Color(94f, 155f, 255f, 0.5f);
         }
         else
         {
             rb.gravityScale = 2f;
             masterMixer.SetFloat(_FreqFilterName, _SoundLowpassMax);
+            _renderer.color = Color.white;
         }
 
         // Stuff for double-jump
@@ -111,7 +128,10 @@ public class Character : MonoBehaviour {
     {
 
         animator.SetBool("Running", input != 0);
-
+        if (input !=0 && isGrounded && !inWater)
+        {
+            _sounds.walk();
+        }
         if (input > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
@@ -194,5 +214,10 @@ public class Character : MonoBehaviour {
         {
             onVictoryEvent.Invoke();
         }
+    }
+
+    private bool AcceptingInput()
+    {
+        return !GameManager.PAUSED_STATES.Contains(_gameManager.gameState);
     }
 }

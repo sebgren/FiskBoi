@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -8,9 +9,12 @@ public class GameManager : MonoBehaviour {
     private GameObject _player;
 
     private PlayerStats _PlayerStats;
+    private Character _PlayerCharacter;
 
     [SerializeField]
     private GameObject _deathMenu;
+    [SerializeField]
+    private GameObject _victoryMenu;
 
     private GameState _gameState = GameState.STARTED;
 
@@ -26,17 +30,24 @@ public class GameManager : MonoBehaviour {
             throw new MissingComponentException("Player is not set!");
         }
 
-        if (_deathMenu == null)
+        if (_deathMenu == null || _victoryMenu == null)
         {
-            throw new MissingComponentException("Death Menu is not set!");
+            throw new MissingComponentException("Menus are not set!");
         }
 
         _PlayerStats = _player.GetComponent<PlayerStats>();
+        _PlayerCharacter = _player.GetComponent<Character>();
 
-        Character playerCharacter = _player.GetComponent<Character>();
-        playerCharacter.onVictoryEvent += () =>
+        _PlayerCharacter.onVictoryEvent += () =>
         {
-            _gameState = GameState.PAUSED;
+            gameState = GameState.PAUSED;
+            _victoryMenu.SetActive(true);
+            float hs = PlayerPrefs.GetFloat("HS" + SceneManager.GetActiveScene().buildIndex);
+            print(hs);
+            if (hs > _timer || hs == 0)
+            {
+                PlayerPrefs.SetFloat("HS" + SceneManager.GetActiveScene().buildIndex, _timer);
+            }
         };
 
         _PlayerStats.deathEvent += (target, reason) =>
@@ -84,6 +95,7 @@ public class GameManager : MonoBehaviour {
 
     public void start()
     {
+        _victoryMenu.SetActive(false);
         this.gameState = GameState.STARTED;
         _timer = 0;
     }

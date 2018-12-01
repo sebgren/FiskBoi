@@ -315,6 +315,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\CharacterSounds.cs" />
     <Compile Include="Assets\Scripts\Character\Stats.cs" />
+    <Compile Include="Assets\Scripts\Env\DeathScript.cs" />
     <Compile Include="Assets\Scripts\Env\VictoryOrb.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
@@ -322,11 +323,13 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\UI\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\UI\Quit.cs" />
     <Compile Include="Assets\Scripts\UI\RespawnOnClick.cs" />
+    <Compile Include="Assets\Scripts\UI\TheBar.cs" />
+    <Compile Include="Assets\Scripts\UI\VictorySCreen.cs" />
     <Compile Include="Assets\TriggerVolume.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <None Include="Assets\Plugins\GitHub\Editor\credits.txt" />
     <None Include="Assets\Plugins\GitHub\Editor\eula.txt" />
     <None Include="Packages\com.unity.analytics\Editor\Android\Unity.Analytics.Android.Editor.asmdef" />

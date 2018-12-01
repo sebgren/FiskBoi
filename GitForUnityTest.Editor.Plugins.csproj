@@ -382,7 +382,6 @@
     <Compile Include="Assets\Plugins\GitHub\Editor\ExtensionLoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <None Include="Assets\Plugins\GitHub\Editor\credits.txt" />
     <None Include="Assets\Plugins\GitHub\Editor\eula.txt" />
     <None Include="Packages\com.unity.analytics\Editor\Android\Unity.Analytics.Android.Editor.asmdef" />
