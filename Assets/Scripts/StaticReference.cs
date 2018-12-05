@@ -71,6 +71,13 @@ public class StaticReference
         return GetTargetComponentByName<Tilemap>(TILEMAP_WATER_NAME);
     }
 
+
+    /// <summary>
+    /// Gets a component by gameobject name. Throws exception if it is missing
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="referenceName"></param>
+    /// <returns></returns>
     private static T GetTargetComponentByName<T>(string referenceName)
     {
         GameObject target = GameObject.Find(referenceName);
