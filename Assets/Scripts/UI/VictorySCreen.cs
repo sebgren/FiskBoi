@@ -18,11 +18,11 @@ public class VictorySCreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        manager = StaticReference.GameManager();
 
         manager.onGameStateChange += (GameManager.GameState newState, GameManager.GameState oldState) =>
         {
-            hs.text = "HighScore " + Math.Round(PlayerPrefs.GetFloat("HS" + SceneManager.GetActiveScene().buildIndex), 2).ToString();
+            hs.text = "Lowest Time " + Math.Round(PlayerPrefs.GetFloat("HS" + SceneManager.GetActiveScene().buildIndex), 2).ToString();
         };
 
         
@@ -31,6 +31,6 @@ public class VictorySCreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score " + Math.Round(manager._timer, 2).ToString();
+        score.text = "Time " + Math.Round(manager._timer, 2).ToString();
     }
 }

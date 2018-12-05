@@ -5,16 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject _player;
-
     private PlayerStats _PlayerStats;
     private Character _PlayerCharacter;
+    private PlayerController _PlayerController;
 
-    [SerializeField]
-    private GameObject _deathMenu;
-    [SerializeField]
-    private GameObject _victoryMenu;
+
+    public GameObject deathMenu;
+
+    public GameObject victoryMenu;
 
     private GameState _gameState = GameState.STARTED;
 
@@ -25,23 +23,19 @@ public class GameManager : MonoBehaviour {
 
     public void Start()
     {
-        if (_player == null)
-        {
-            throw new MissingComponentException("Player is not set!");
-        }
-
-        if (_deathMenu == null || _victoryMenu == null)
+        if (deathMenu == null || victoryMenu == null)
         {
             throw new MissingComponentException("Menus are not set!");
         }
 
-        _PlayerStats = _player.GetComponent<PlayerStats>();
-        _PlayerCharacter = _player.GetComponent<Character>();
+        _PlayerStats = StaticReference.PlayerStats();
+        _PlayerCharacter = StaticReference.PlayerCharacter();
+        _PlayerController = StaticReference.PlayerController();
 
         _PlayerCharacter.onVictoryEvent += () =>
         {
             gameState = GameState.PAUSED;
-            _victoryMenu.SetActive(true);
+            victoryMenu.SetActive(true);
             float hs = PlayerPrefs.GetFloat("HS" + SceneManager.GetActiveScene().buildIndex);
             print(hs);
             if (hs > _timer || hs == 0)
@@ -81,21 +75,22 @@ public class GameManager : MonoBehaviour {
 
     private void gameOver(DeathReason reason)
     {
-        _deathMenu.SetActive(true);
+        deathMenu.SetActive(true);
         this.gameState = GameState.PAUSED;
     }
 
     public void respawn()
     {
-        _player.GetComponent<PlayerController>().Respawn();
+        this.gameState = GameState.PAUSED;
+        _PlayerController.Respawn();
         _PlayerStats.reset();
-        _deathMenu.SetActive(false);
+        deathMenu.SetActive(false);
         start();
     }
 
     public void start()
     {
-        _victoryMenu.SetActive(false);
+        victoryMenu.SetActive(false);
         this.gameState = GameState.STARTED;
         _timer = 0;
     }

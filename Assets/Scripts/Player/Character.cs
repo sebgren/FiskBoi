@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Tilemaps;
+﻿using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Animations;
+using UnityEngine.Tilemaps;
 
 public class Character : MonoBehaviour {
 
@@ -16,8 +13,8 @@ public class Character : MonoBehaviour {
     public float speed = 10;
     public float breathChangeRate = 0.01f;
 
-    public Tilemap waterTiles;
-    public Tilemap groundTiles;
+    private Tilemap _waterTiles;
+    private Tilemap _groundTiles;
 
     public Animator animator;
 
@@ -57,13 +54,9 @@ public class Character : MonoBehaviour {
 
         _renderer = animator.gameObject.GetComponent<SpriteRenderer>();
 
-        GameObject manager = GameObject.Find("GameManager");
-
-        if (!manager)
-        {
-            throw new MissingReferenceException("There is no GameManager in the scene?!?!");
-        }
-        _gameManager = manager.GetComponent<GameManager>();
+        _gameManager = StaticReference.GameManager();
+        _groundTiles = StaticReference.Ground();
+        _waterTiles = StaticReference.Water();
 
 
         if (_stats == null)
@@ -76,7 +69,7 @@ public class Character : MonoBehaviour {
             Debug.LogWarning("No CharacterSounds component found. No sounds will play");
         }
 
-        if (groundTiles == null || waterTiles == null)
+        if (_groundTiles == null || _waterTiles == null)
         {
             throw new MissingComponentException("No tilemaps set, you forgot.");
         }
@@ -192,8 +185,8 @@ public class Character : MonoBehaviour {
     /// <returns>True if in water otherwise false</returns>
     bool IsInWaterCheck()
     {
-        Vector3Int cellPosition = waterTiles.WorldToCell(transform.position);
-        TileBase currentTile = waterTiles.GetTile(cellPosition);
+        Vector3Int cellPosition = _waterTiles.WorldToCell(transform.position);
+        TileBase currentTile = _waterTiles.GetTile(cellPosition);
         return currentTile != null;
     }
 

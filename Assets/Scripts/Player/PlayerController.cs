@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 spawnPosition;
     Character character;
+    Rigidbody2D _rigidbody2D;
 
     GameManager _gameManager;
 
@@ -14,13 +15,8 @@ public class PlayerController : MonoBehaviour {
         spawnPosition = new Vector3(transform.position.x, transform.position.y +1, transform.position.z);
         character = GetComponent<Character>();
 
-        GameObject manager = GameObject.Find("GameManager");
-
-        if (!manager)
-        {
-            throw new MissingReferenceException("There is no GameManager in the scene?!?!");
-        }
-        _gameManager = manager.GetComponent<GameManager>();
+        _gameManager = StaticReference.GameManager();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
 
     }
 
@@ -31,9 +27,14 @@ public class PlayerController : MonoBehaviour {
 
             character.Move(Input.GetAxis("Horizontal"));
 
-            if (Input.GetKeyDown("space"))
+            if (Input.GetButtonDown("Jump"))
             {
                 character.Jump();
+            }
+
+            if (Input.GetButtonDown("reset"))
+            {
+                _gameManager.respawn();
             }
 
         }
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 
     public void Respawn() {
         transform.position = spawnPosition;
+        _rigidbody2D.velocity = Vector3.zero;
     }
 
     private bool AcceptingInput()

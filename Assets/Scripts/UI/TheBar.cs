@@ -24,7 +24,8 @@ public class TheBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        manager = StaticReference.GameManager();
+        stats = StaticReference.PlayerStats();
         left = GameObject.Find("LeftFill").GetComponent<Image>();
         right = GameObject.Find("RightFill").GetComponent<Image>();
         stats.breathEvent += (target, breath) =>
