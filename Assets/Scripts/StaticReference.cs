@@ -75,9 +75,11 @@ public class StaticReference
     /// <summary>
     /// Gets a component by gameobject name. Throws exception if it is missing
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="referenceName"></param>
-    /// <returns></returns>
+    /// <typeparam name="T">The Component class</typeparam>
+    /// <param name="referenceName">The name of the target gameobject</param>
+    /// <exception cref="GameObjectReferenceNotFound">Thrown if no GameObject by that name excist</exception>
+    /// <exception cref="ComponentReferenceNotFound">Thrown if a component is missing</exception>
+    /// <returns>A component of class T</returns>
     private static T GetTargetComponentByName<T>(string referenceName)
     {
         GameObject target = GameObject.Find(referenceName);

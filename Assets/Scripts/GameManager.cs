@@ -99,10 +99,11 @@ public class GameManager : MonoBehaviour {
     {
         UNKOWN,
         STARTED,
-        PAUSED
+        PAUSED,
+        LOADING
     }
 
-    public static HashSet<GameState> PAUSED_STATES = new HashSet<GameState> { GameState.UNKOWN, GameState.PAUSED };
+    public static HashSet<GameState> PAUSED_STATES = new HashSet<GameState> { GameState.UNKOWN, GameState.PAUSED, GameState.LOADING };
 
 
     public GameState gameState

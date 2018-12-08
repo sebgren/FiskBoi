@@ -13,6 +13,7 @@ public class Boostrap : MonoBehaviour
     public static string PREFAB_DEATH_MENU = "Prefabs/UI/DeathCanvas";
     public static string PREFAB_VICTORY_MENU = "Prefabs/UI/VictoryCanvas";
     public static string PREFAB_UI = "Prefabs/UI/Canvas";
+    public static string MAIN_CAMERA = "Prefabs/MainCamera";
 
     public int nextLevelIndex = 0;
 
@@ -22,6 +23,7 @@ public class Boostrap : MonoBehaviour
     void Start()
     {
         CheckRequired();
+        InitCamera();
         InitGameManager();
         InitUI();
     }
@@ -65,6 +67,12 @@ public class Boostrap : MonoBehaviour
             manager.victoryMenu = (GameObject)Instantiate(Resources.Load(PREFAB_VICTORY_MENU));
             manager.victoryMenu.name = StaticReference.VICTORY_MENU;
         }
+        manager.victoryMenu.GetComponentInChildren<LoadSceneOnClick>().indexOverride = nextLevelIndex;
+    }
+
+    private void InitCamera()
+    {
+        Instantiate(Resources.Load(MAIN_CAMERA));
     }
 
     private void InitUI()

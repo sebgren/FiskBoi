@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour {
 
+    public int? indexOverride = null;
+
 	public void LoadByIndex(int sceneIndex)
     {
+        int indexToLoad = indexOverride == null ? sceneIndex : indexOverride.Value;
         SceneManager.LoadScene(sceneIndex);
     }
 
